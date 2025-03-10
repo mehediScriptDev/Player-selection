@@ -33,6 +33,11 @@ function App() {
       const newPlayer = players1 + 1;
       setPlayers(newPlayer);
     }
+
+    // selection btn function
+    const hideanother = () => {
+      
+    }
   };
 
   return (
@@ -43,12 +48,12 @@ function App() {
         <Hero moneyHandler={moneyHandler}></Hero>
         <Players players1={players1} addPlayer={addPlayer}></Players>
         <Plaayeradded selectplayer={selectplayer}></Plaayeradded>
+        <div className="pb-9">
         {selectplayer.map(player => <Savedplayer player={player}></Savedplayer>)}
+        </div>
       </main>
       <Footer></Footer>
       <Beforefooter></Beforefooter>
-      
-      
     </>
   );
 }
